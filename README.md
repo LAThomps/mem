@@ -1,10 +1,12 @@
 # mem
-A command line tool to parse output of `ps aux` and show current memory usage based on string matches.<br><br>
+A command line tool to parse output of `$ ps aux` and show current memory usage based on string matches.<br><br>
 Usage:<br>
-`$ mem mysql`<br><br>
+`$ mem mysql`<br>
 Output:<br>
-<code>RAM In Use:  1762 MB (22.7%)<br>
-mysql:       398 MB (5.1%)<br>
-<br>
-RAM Free:    5988 MB<br>
-Total RAM:   7750 MB</code>
+```text
+RAM In Use:  1762 MB (22.7%)
+mysql:       398 MB (5.1%)
+
+RAM Free:    5988 MB
+Total RAM:   7750 MB
+```
