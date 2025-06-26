@@ -4,7 +4,22 @@ import subprocess
 import sys 
 import psutil
 
+HELP_MSG = """
+usage: mem <string1> <string2>
+
+Return current memory usage stats for all processes that
+contain the strings in the arguments you pass. If none
+passed, just outputs total RAM use.
+"""
+
 def main():
+    # help option
+    if "-h" in sys.argv:
+        print(HELP_MSG)
+        sys.argv = [arg for arg in sys.argv if arg != "-h"]
+        if len(sys.argv) == 1:
+            return
+        
     # run ps aux and capture output, raise error if on non-POSIX system
     ps_aux = subprocess.run(["ps aux"], shell=True, capture_output=True)
     if ps_aux.returncode != 0:
