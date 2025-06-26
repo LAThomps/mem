@@ -48,7 +48,8 @@ def main():
     chmod = subprocess.run(["chmod +x mem.py"], shell=True)
     sudo_cp = subprocess.run(["sudo cp mem.py /usr/local/bin/mem.py"], shell=True)
     mv_mem = subprocess.run(
-        ["sudo mv /usr/local/bin/mem.py /usr/local/bin/mem"], shell=True
+        ["sudo mv /usr/local/bin/mem.py /usr/local/bin/mem"], 
+        shell=True
     )
 
     # all of these need to work, so error and show progress
